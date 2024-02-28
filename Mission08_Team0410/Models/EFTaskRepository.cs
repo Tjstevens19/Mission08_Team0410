@@ -12,21 +12,21 @@ namespace Mission08_Team0410.Models
             _context = context;
         }
 
-        public List<TaskClass> Tasks => _context.Tasks.ToList();
+        public List<Task> Tasks => _context.Tasks.ToList();
 
-        public void AddTask(TaskClass task)
+       public void AddTask(Task task)
         {
             _context.Tasks.Add(task);
             _context.SaveChanges();
         }
 
-        public void UpdateTask(TaskClass task)
+        public void UpdateTask(Task task)
         {
             _context.Tasks.Update(task);
             _context.SaveChanges();
         }
 
-        public void DeleteTask(TaskClass task)
+        public void DeleteTask(Task task)
         {
             _context.Tasks.Remove(task);
             _context.SaveChanges();

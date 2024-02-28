@@ -2,11 +2,11 @@
 
 namespace Mission08_Team0410.Models
 {
-    public class TaskClass
+    public class Task
     {
         public int TaskId { get; set; }
         [Required]
-        public string Task { get; set; }
+        public string TaskName { get; set; }
         public DateTime DueDate { get; set; }
         [Required]
         public string Quadrant { get; set; }
