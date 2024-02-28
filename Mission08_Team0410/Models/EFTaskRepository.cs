@@ -19,5 +19,19 @@ namespace Mission08_Team0410.Models
             _context.Tasks.Add(task);
             _context.SaveChanges();
         }
+
+        public void UpdateTask(TaskClass task)
+        {
+            _context.Tasks.Update(task);
+            _context.SaveChanges();
+        }
+
+        public void DeleteTask(TaskClass task)
+        {
+            _context.Tasks.Remove(task);
+            _context.SaveChanges();
+        }
+
+
     }
 }
