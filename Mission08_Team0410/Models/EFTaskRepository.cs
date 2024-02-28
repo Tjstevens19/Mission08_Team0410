@@ -1,19 +1,22 @@
-﻿using SQLitePCL;
+﻿using System.Collections.Generic;
+using System.Linq;
 
 namespace Mission08_Team0410.Models
 {
     public class EFTaskRepository : iTaskRepository
     {
         private Mission08Context _context;
-        public EFTaskRepository(Mission08Context temp) 
-        {
-            _context = temp;
-        }
-        public List<Task> Tasks => _context.Tasks.ToList();
 
-        public void AddTask(Task task)
+        public EFTaskRepository(Mission08Context context)
         {
-            _context.Add(task);
+            _context = context;
+        }
+
+        public List<TaskClass> Tasks => _context.Tasks.ToList();
+
+        public void AddTask(TaskClass task)
+        {
+            _context.Tasks.Add(task);
             _context.SaveChanges();
         }
     }
