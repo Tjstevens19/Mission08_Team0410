@@ -11,7 +11,7 @@ namespace Mission08_Team0410.Controllers
             return View();
         }
 
-        public IActionResult Privacy()
+        public IActionResult AddTask()
         {
             return View();
         }
