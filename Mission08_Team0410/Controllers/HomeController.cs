@@ -12,13 +12,19 @@ namespace Mission08_Team0410.Controllers
         {
             _repo = temp;
         }
+        }
+
+        }
+
+        }
+
         public IActionResult Index()
         {
             return View();
-        }
-
         [HttpGet]
         public IActionResult AddTask()
+
+        public IActionResult Privacy()
         {
             ViewBag.Tasks = _repo.Tasks;
             return base.View("AddTask", new Models.Task());
@@ -30,6 +36,15 @@ namespace Mission08_Team0410.Controllers
             return RedirectToAction("Index");
         }
 
+
+
+
+        [HttpPost]
+        public IActionResult AddTask(TaskClass newtask)
+        {
+            _repo.AddTask(newtask);
+            return RedirectToAction("Index");
+        }
 
         //[HttpGet]
         //public IActionResult UpdateTask(int id)
@@ -58,5 +73,7 @@ namespace Mission08_Team0410.Controllers
             return RedirectToAction("Index");
         }
 
+            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
     }
 }
