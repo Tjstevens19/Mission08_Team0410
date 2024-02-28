@@ -2,7 +2,89 @@
     ViewData["Title"] = "Home Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Quadrants View</title>
+    <style>
+        .rotate {
+            /* CSS for rotating the text */
+            transform: rotate(-90deg);
+            transform-origin: left top 0;
+            width: 30px;
+            height: 100px;
+            text-align: center;
+            white-space: nowrap;
+        }
+
+        .border-box {
+            border: 1px solid #000;
+            margin-bottom: -1px;
+        }
+
+        .bordered {
+            border: 1px solid #000;
+        }
+    </style>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container mt-4">
+        <div class="row mb-4">
+            <div class="col-12 text-center">
+                <h1>Stephen Covey's Time Management Matrix</h1>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 align-self-center">
+                <div class="rotate">IMPORTANT</div>
+            </div>
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-6 text-center">
+                        <h2>Urgent</h2>
+                    </div>
+                    <div class="col-6 text-center">
+                        <h2>Not Urgent</h2>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-6 border-box">
+                        <h3>Quadrant I: Important / Urgent</h3>
+                        <!-- Tasks for Quadrant I -->
+                    </div>
+                    <div class="col-6 border-box">
+                        <h3>Quadrant II: Important / Not Urgent</h3>
+                        <!-- Tasks for Quadrant II -->
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-1 align-self-center">
+                <div class="rotate">NOT IMPORTANT</div>
+            </div>
+            <div class="col-11">
+                <div class="row">
+                    <div class="col-6 border-box">
+                        <h3>Quadrant III: Not Important / Urgent</h3>
+                        <!-- Tasks for Quadrant III -->
+                    </div>
+                    <div class="col-6 border-box">
+                        <h3>Quadrant IV: Not Important / Not Urgent</h3>
+                        <!-- Tasks for Quadrant IV -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
