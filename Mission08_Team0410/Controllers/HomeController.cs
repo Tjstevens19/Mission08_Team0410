@@ -12,35 +12,20 @@ namespace Mission08_Team0410.Controllers
         {
             _repo = temp;
         }
-        }
-
-        }
-
-        }
-
         public IActionResult Index()
         {
             return View();
+        }
+
         [HttpGet]
         public IActionResult AddTask()
-
-        public IActionResult Privacy()
         {
             ViewBag.Tasks = _repo.Tasks;
-            return base.View("AddTask", new Models.Task());
+            return View("AddTask", new Models.Task());
         }
+
         [HttpPost]
         public IActionResult AddTask(Models.Task newtask)
-        {
-            _repo.AddTask(newtask);
-            return RedirectToAction("Index");
-        }
-
-
-
-
-        [HttpPost]
-        public IActionResult AddTask(TaskClass newtask)
         {
             _repo.AddTask(newtask);
             return RedirectToAction("Index");
@@ -52,6 +37,7 @@ namespace Mission08_Team0410.Controllers
             //Models.Task task = _repo.Tasks.FirstOrDefault((System.Threading.Tasks.Task t) => t.TaskID == id);
             //return View(task);
         //}
+
         [HttpPost]
         public IActionResult UpdateTask(Models.Task task)
         {
@@ -73,7 +59,5 @@ namespace Mission08_Team0410.Controllers
             return RedirectToAction("Index");
         }
 
-            return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
         }
     }
-}

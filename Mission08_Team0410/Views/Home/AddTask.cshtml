@@ -2,20 +2,22 @@
     ViewData["Title"] = "Add Task";
 }
 
+@model Task
+
 <div class="text-center">
     <h1 class="display-4">Add a task to your own time management matrix!</h1>
 </div>
-<!--This is a note to practie github-->
 
 <div class="col-4">
     <form method="post">
         <input type="hidden" asp-for="TaskId" />
 
-        <label asp-for="Task">New Task</label>
-        <input asp-for="Task" required />
+        <label asp-for="TaskName">New Task</label>
+        <input asp-for="TaskName" required />
         <br />
-        <label asp-for="DueDate" type="date">Due Date</label>
-        <input asp-for="DueDate" />
+        <label asp-for="DueDate"
+        >Due Date</label>
+        <input asp-for="DueDate" type="date" />
         <br />
         <label asp-for="Quadrant">Quadrant</label>
         <select asp-for="Quadrant">
@@ -43,5 +45,3 @@
         <button class="btn btn-info" type="submit">Add New Task</button>
     </form>
 </div>
-
-
