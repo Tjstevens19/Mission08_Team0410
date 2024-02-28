@@ -9,6 +9,6 @@ namespace Mission08_Team0410.Models
 
         }
 
-        public DbSet<TaskClass> Schedule {  get; set; }
+        public DbSet<TaskClass> Task {  get; set; }
     }
 }
