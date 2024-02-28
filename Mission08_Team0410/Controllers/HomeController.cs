@@ -29,12 +29,7 @@ namespace Mission08_Team0410.Controllers
         //    return RedirectToAction("Index");
         //}
 
-        //[HttpGet]
-        //public IActionResult DeleteTask(int id)
-        //{
-        //    _repo.DeleteTask(id);
-        //    return RedirectToAction("Index");
-        //}
+
         //[HttpGet]
         //public IActionResult UpdateTask(int id)
         //{
@@ -45,6 +40,20 @@ namespace Mission08_Team0410.Controllers
         //public IActionResult UpdateTask(TaskClass task)
         //{
         //    _repo.UpdateTask(task);
+        //    return RedirectToAction("Index");
+        //}
+
+        //[HttpGet]
+        //public IActionResult DeleteTask(int id)
+        //{
+        //    _repo.DeleteTask(id);
+        //    return RedirectToAction("Index");
+        //}
+
+        //[HttpPost]
+        //public IActionResult DeleteTask(TaskClass task)
+        //{
+        //    _repo.DeleteTask(task);
         //    return RedirectToAction("Index");
         //}
 
