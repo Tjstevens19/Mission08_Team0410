@@ -14,7 +14,9 @@ namespace Mission08_Team0410.Controllers
         }
         public IActionResult Index()
         {
-            return View();
+            var Tasks = _repo.Tasks;
+            return View(Tasks);
+            
         }
 
         [HttpGet]
