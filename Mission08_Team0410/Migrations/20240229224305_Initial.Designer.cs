@@ -11,7 +11,7 @@ using Mission08_Team0410.Models;
 namespace Mission08_Team0410.Migrations
 {
     [DbContext(typeof(Mission08Context))]
-    [Migration("20240229013027_Initial")]
+    [Migration("20240229224305_Initial")]
     partial class Initial
     {
         /// <inheritdoc />
@@ -57,7 +57,7 @@ namespace Mission08_Team0410.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Mission08_Team0410.Models.Task", b =>
+            modelBuilder.Entity("Mission08_Team0410.Models.CoveyTask", b =>
                 {
                     b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
@@ -87,7 +87,7 @@ namespace Mission08_Team0410.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("Mission08_Team0410.Models.Task", b =>
+            modelBuilder.Entity("Mission08_Team0410.Models.CoveyTask", b =>
                 {
                     b.HasOne("Mission08_Team0410.Models.Category", "Category")
                         .WithMany()

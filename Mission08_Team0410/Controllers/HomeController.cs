@@ -15,6 +15,7 @@ namespace Mission08_Team0410.Controllers
         public IActionResult Index()
         {
             var Tasks = _repo.Tasks;
+                //.Include(x => x.Category);
             return View(Tasks);
             
         }

@@ -54,7 +54,7 @@ namespace Mission08_Team0410.Migrations
                         });
                 });
 
-            modelBuilder.Entity("Mission08_Team0410.Models.Task", b =>
+            modelBuilder.Entity("Mission08_Team0410.Models.CoveyTask", b =>
                 {
                     b.Property<int>("TaskId")
                         .ValueGeneratedOnAdd()
@@ -84,7 +84,7 @@ namespace Mission08_Team0410.Migrations
                     b.ToTable("Tasks");
                 });
 
-            modelBuilder.Entity("Mission08_Team0410.Models.Task", b =>
+            modelBuilder.Entity("Mission08_Team0410.Models.CoveyTask", b =>
                 {
                     b.HasOne("Mission08_Team0410.Models.Category", "Category")
                         .WithMany()
