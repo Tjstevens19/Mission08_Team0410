@@ -8,7 +8,7 @@ namespace Mission08_Team0410.Models
         {
         }
 
-        public DbSet<Task> Tasks {  get; set; }
+        public DbSet<CoveyTask> Tasks {  get; set; }
         public DbSet<Category> Categories { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

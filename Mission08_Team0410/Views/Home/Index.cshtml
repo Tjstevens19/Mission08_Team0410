@@ -2,6 +2,7 @@
     ViewData["Title"] = "Home Page";
 }
 
+@model List<CoveyTask>
 
 <!DOCTYPE html>
 <html lang="en">
@@ -56,6 +57,22 @@
                     <div class="col-6 border-box">
                         <h3>Quadrant I: Important / Urgent</h3>
                         <!-- Tasks for Quadrant I -->
+                        @foreach (var x in Model)
+                        {
+                            <tbody>
+                                <tr>
+                                    <td>@x.TaskName</td>
+                                    <td>@x.DueDate</td>
+                                    <td>@x.Quadrant</td>
+                                    <td>@x.Category.CategoryName</td>
+                                    <td>@x.Completed</td>
+                                    <td><a class="btn btn-info" asp-controller="Home" asp-action="Edit" asp-route-id="@x.TaskId">Edit</a></td>
+                                    <td><a class="btn btn-danger" asp-controller="Home" asp-action="Delete" asp-route-id="@x.TaskId">Delete</a></td>
+                                </tr>
+                            </tbody>
+                        }
+
+
                     </div>
                     <div class="col-6 border-box">
                         <h3>Quadrant II: Important / Not Urgent</h3>

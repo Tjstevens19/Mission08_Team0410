@@ -12,22 +12,22 @@ namespace Mission08_Team0410.Models
             _context = context;
         }
 
-        public List<Task> Tasks => _context.Tasks.ToList();
+        public List<CoveyTask> Tasks => _context.Tasks.ToList();
         public List<Category> Categories => _context.Categories.ToList();
 
-       public void AddTask(Task task)
+       public void AddTask(CoveyTask task)
         {
             _context.Tasks.Add(task);
             _context.SaveChanges();
         }
 
-        public void UpdateTask(Task task)
+        public void UpdateTask(CoveyTask task)
         {
             _context.Tasks.Update(task);
             _context.SaveChanges();
         }
 
-        public void DeleteTask(Task task)
+        public void DeleteTask(CoveyTask task)
         {
             _context.Tasks.Remove(task);
             _context.SaveChanges();

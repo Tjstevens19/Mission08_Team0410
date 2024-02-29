@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace Mission08_Team0410.Models
 {
-    public class Task
+    public class CoveyTask
     {
         public int TaskId { get; set; }
         [Required]
