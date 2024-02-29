@@ -20,7 +20,7 @@ namespace Mission08_Team0410.Controllers
         [HttpGet]
         public IActionResult AddTask()
         {
-            ViewBag.Tasks = _repo.Tasks;
+            ViewBag.Categories = _repo.Categories;
             return View("AddTask", new Models.Task());
         }
 
