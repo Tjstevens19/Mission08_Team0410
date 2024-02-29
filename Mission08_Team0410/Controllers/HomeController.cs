@@ -23,11 +23,11 @@ namespace Mission08_Team0410.Controllers
         public IActionResult AddTask()
         {
             ViewBag.Categories = _repo.Categories;
-            return View("AddTask", new Models.Task());
+            return View("AddTask", new Models.CoveyTask());
         }
 
         [HttpPost]
-        public IActionResult AddTask(Models.Task newtask)
+        public IActionResult AddTask(Models.CoveyTask newtask)
         {
             _repo.AddTask(newtask);
             return RedirectToAction("Index", newtask);
@@ -42,7 +42,7 @@ namespace Mission08_Team0410.Controllers
         }
 
         [HttpPost]
-        public IActionResult UpdateTask(Models.Task task)
+        public IActionResult UpdateTask(Models.CoveyTask task)
         {
             _repo.UpdateTask(task);
             return RedirectToAction("Index");
@@ -58,7 +58,7 @@ namespace Mission08_Team0410.Controllers
         }
 
         [HttpPost]
-        public IActionResult DeleteTask(Models.Task task)
+        public IActionResult DeleteTask(Models.CoveyTask task)
         {
             _repo.DeleteTask(task);
             return RedirectToAction("Index");

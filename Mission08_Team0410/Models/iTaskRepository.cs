@@ -2,11 +2,11 @@
 {
     public interface iTaskRepository
     {
-        List<Task> Tasks { get; }
+        List<CoveyTask> Tasks { get; }
         List<Category> Categories { get; }
-        public void AddTask(Task task);
-        public void UpdateTask(Task task);
-        public void DeleteTask(Task task);
+        public void AddTask(CoveyTask task);
+        public void UpdateTask(CoveyTask task);
+        public void DeleteTask(CoveyTask task);
 
     }
 }
