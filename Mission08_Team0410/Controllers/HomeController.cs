@@ -28,15 +28,16 @@ namespace Mission08_Team0410.Controllers
         public IActionResult AddTask(Models.Task newtask)
         {
             _repo.AddTask(newtask);
-            return RedirectToAction("Index");
+            return RedirectToAction("Index", newtask);
         }
 
-        //[HttpGet]
-        //public IActionResult UpdateTask(int id)
-        //{
-            //Models.Task task = _repo.Tasks.FirstOrDefault((System.Threading.Tasks.Task t) => t.TaskID == id);
-            //return View(task);
-        //}
+        [HttpGet]
+        public IActionResult UpdateTask(int id)
+        {
+            var recordToUpdate = _repo.Tasks.FirstOrDefault(t => t.TaskId == id);
+            ViewBag.Categories = _repo.Categories;
+            return View("AddTask", recordToUpdate);
+        }
 
         [HttpPost]
         public IActionResult UpdateTask(Models.Task task)
@@ -45,12 +46,14 @@ namespace Mission08_Team0410.Controllers
             return RedirectToAction("Index");
         }
 
-        //[HttpGet]
-        //public IActionResult DeleteTask(int id)
-        //{
-        //    _repo.DeleteTask(id);
-        //    return RedirectToAction("Index");
-        //}
+        [HttpGet]
+        public IActionResult DeleteTask(int id)
+        {
+            var recordToDelete = _repo.Tasks.FirstOrDefault(t => t.TaskId == id);
+            ViewBag.Categories = _repo.Categories;
+            return View("DeleteTask", recordToDelete);
+
+        }
 
         [HttpPost]
         public IActionResult DeleteTask(Models.Task task)
