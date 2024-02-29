@@ -5,6 +5,7 @@ namespace Mission08_Team0410.Models
 {
     public class CoveyTask
     {
+        [Key]
         public int TaskId { get; set; }
         [Required]
         public string TaskName { get; set; }
