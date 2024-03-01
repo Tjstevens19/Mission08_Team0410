@@ -18,11 +18,17 @@
             height: 100px;
             text-align: center;
             white-space: nowrap;
+            position: absolute;
+            top: 50%;
+            left: 0;
+            margin-top: -50px; /* Half of the height */
         }
 
         .border-box {
             border: 1px solid #000;
             margin-bottom: -1px;
+            position: relative;
+            overflow: hidden;
         }
 
         .bordered {
@@ -41,8 +47,8 @@
         </div>
 
         <div class="row">
-            <div class="col-1 align-self-center">
-                <div class="rotate">IMPORTANT</div>
+            <div class="col-1 align-self-center pl-0">
+                <div style="font-weight:bold">IMPORTANT</div>
             </div>
             <div class="col-11">
                 <div class="row">
@@ -92,8 +98,8 @@
         </div>
 
         <div class="row">
-            <div class="col-1 align-self-center">
-                <div class="rotate">NOT IMPORTANT</div>
+            <div class="col-1 align-self-center pl-0">
+                <div style="font-weight:bold">NOT IMPORTANT</div>
             </div>
             <div class="col-11">
                 <div class="row">
