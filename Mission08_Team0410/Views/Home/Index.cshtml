@@ -63,11 +63,12 @@
                                 <tr>
                                     <td>@task.TaskName</td>
                                     <td>@task.DueDate.ToShortDateString()</td>
-                                    @* <td>@task.Category.CategoryName</td> *@
+                                    <td>@(task.Category != null ? task.Category.CategoryName : "N/A")</td>
                                     <td><a class="btn btn-info" asp-controller="Home" asp-action="UpdateTask" asp-route-id="@task.TaskId">Edit</a></td>
                                     <td><a class="btn btn-danger" asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId">Delete</a></td>
                                 </tr>
                             </tbody>
+                            <br />
                         }
                     </div>
                     <div class="col-6 border-box">
@@ -79,7 +80,7 @@
                                 <tr>
                                     <td>@task.TaskName</td>
                                     <td>@task.DueDate.ToShortDateString()</td>
-                                    @* <td>@task.Category.CategoryName</td> *@
+                                    <td>@(task.Category != null ? task.Category.CategoryName : "N/A")</td>
                                     <td><a class="btn btn-info" asp-controller="Home" asp-action="UpdateTask" asp-route-id="@task.TaskId">Edit</a></td>
                                     <td><a class="btn btn-danger" asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId">Delete</a></td>
                                 </tr>
@@ -105,7 +106,7 @@
                                 <tr>
                                     <td>@task.TaskName</td>
                                     <td>@task.DueDate.ToShortDateString()</td>
-                                    @* <td>@task.Category.CategoryName</td> *@
+                                    <td>@(task.Category != null ? task.Category.CategoryName : "N/A")</td>
                                     <td><a class="btn btn-info" asp-controller="Home" asp-action="UpdateTask" asp-route-id="@task.TaskId">Edit</a></td>
                                     <td><a class="btn btn-danger" asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId">Delete</a></td>
                                 </tr>
@@ -121,7 +122,7 @@
                                 <tr>
                                     <td>@task.TaskName</td>
                                     <td>@task.DueDate.ToShortDateString()</td>
-                                    @* <td>@task.Category.CategoryName</td> *@
+                                    <td>@(task.Category != null ? task.Category.CategoryName : "N/A")</td>
                                     <td><a class="btn btn-info" asp-controller="Home" asp-action="UpdateTask" asp-route-id="@task.TaskId">Edit</a></td>
                                     <td><a class="btn btn-danger" asp-controller="Home" asp-action="DeleteTask" asp-route-id="@task.TaskId">Delete</a></td>
                                 </tr>

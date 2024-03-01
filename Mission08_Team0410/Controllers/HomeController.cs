@@ -1,4 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.VisualBasic;
 using Mission08_Team0410.Models;
 using System.Diagnostics;
 using System.Linq;
@@ -12,19 +13,37 @@ namespace Mission08_Team0410.Controllers
         {
             _repo = temp;
         }
+        //[HttpGet]
+        //public IActionResult Index()
+        //{
+        //    var Tasks = _repo.Tasks;
+        //        //.Include(x => x.Category);
+        //    return View(Tasks);
+            
+        //}
+
+        [HttpGet]
         public IActionResult Index()
         {
-            var Tasks = _repo.Tasks;
-                //.Include(x => x.Category);
-            return View(Tasks);
-            
+            var tasksWithCategories = _repo.Tasks.Select(t => _repo.GetTaskById(t.TaskId)).ToList();
+            return View(tasksWithCategories);
         }
+
 
         [HttpGet]
         public IActionResult AddTask()
         {
+            //ViewBag.Categories = _repo.Categories;
+            //return View("AddTask", new Models.CoveyTask());
+
             ViewBag.Categories = _repo.Categories;
-            return View("AddTask", new Models.CoveyTask());
+
+            var newTask = new CoveyTask()
+            {
+                DueDate = DateTime.Today
+            };
+
+            return View("AddTask", newTask);
         }
 
         [HttpPost]
