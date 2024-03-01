@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 using System.Linq;
 
 namespace Mission08_Team0410.Models
@@ -31,6 +32,11 @@ namespace Mission08_Team0410.Models
         {
             _context.Tasks.Remove(task);
             _context.SaveChanges();
+        }
+
+        public CoveyTask GetTaskById(int taskId)
+        {
+            return _context.Tasks.Include(t => t.Category).FirstOrDefault(t => t.TaskId == taskId);
         }
 
 
