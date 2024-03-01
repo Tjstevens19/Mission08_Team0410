@@ -13,14 +13,6 @@ namespace Mission08_Team0410.Controllers
         {
             _repo = temp;
         }
-        //[HttpGet]
-        //public IActionResult Index()
-        //{
-        //    var Tasks = _repo.Tasks;
-        //        //.Include(x => x.Category);
-        //    return View(Tasks);
-            
-        //}
 
         [HttpGet]
         public IActionResult Index()
@@ -33,9 +25,6 @@ namespace Mission08_Team0410.Controllers
         [HttpGet]
         public IActionResult AddTask()
         {
-            //ViewBag.Categories = _repo.Categories;
-            //return View("AddTask", new Models.CoveyTask());
-
             ViewBag.Categories = _repo.Categories;
 
             var newTask = new CoveyTask()
